@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+.left{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo >h1 {
+    font-size: x-large;
+    font-weight: 900;
+}
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+.roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+.right{
+    background-color: #edfffd;
+}
+nav{
+    display: flex;
+    padding: 30px;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+}
+nav >h2{
+    cursor: pointer;
+}
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.sign{
+    text-decoration: none;
+    align-items: center;
+    background-color: #0A66C2;
+    border: 0;
+    border-radius: 100px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    max-width: 480px;
+    min-height: 40px;
+    min-width: 0px;
+    overflow: hidden;
+    padding: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+.sign:hover{
+    opacity: 90%;
+}
+.content{
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    padding: 30px;
+}
+  
+.content > p{
+    line-height: 8px;
+    
+}
+
+.content > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    background-color: #ee6b29;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 0;
+    padding: 0 15px;
+    line-height: 44px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.btn:hover{
+    opacity: 90%;
+}
+.icons{
+    margin: 20px;
+    margin-left: 20px;
+}
+.icons > img {
+    position: relative;
+    height: 40px;
+    margin: 5px;
+}
