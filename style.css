@@ -120,10 +120,14 @@ nav >h2{
 }
 .icons{
     margin: 20px;
-    margin-left: 20px;
+    margin-left: 50px;
 }
 .icons > img {
     position: relative;
-    height: 40px;
+    height: 35px;
     margin: 5px;
+    cursor: pointer;
+}
+.icons > img:hover{
+    transform: translateY(-5px);
 }
