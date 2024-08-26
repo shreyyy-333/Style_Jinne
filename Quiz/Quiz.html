@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Quiz</title>
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="./app.js" defer></script>
+</head>
+
+<body>
+    <div class="quiz-container">
+        <h1>Discover Your Style</h1>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <!-- Question 1 -->
+        <div class="question" id="question-1">
+            <h2>Q1: What is your gender?</h2>
+            <div class="options">
+                <label class="option" onclick="nextQuestion(1, 'male')">
+                    <input type="radio" name="gender" value="male">
+                    <div class="option-content">
+                        <img src="images/male.png" alt="Male">
+                        <span>Male</span>
+                    </div>
+                </label>
+                <label class="option" onclick="nextQuestion(1, 'female')">
+                    <input type="radio" name="gender" value="female">
+                    <div class="option-content">
+                        <img src="images/female.png" alt="Female">
+                        <span>Female</span>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question" id="question-2" style="display: none;">
+            <h2>Q2: What is your skin tone?</h2>
+            <div class="options">
+                <label class="option" onclick="nextQuestion(2)">
+                    <input type="radio" name="skin-tone" value="neutral">
+                    <div class="option-content">
+                        <img src="images/neutral.png" alt="Neutral">
+                        <span>Neutral</span>
+                    </div>
+                </label>
+                <label class="option" onclick="nextQuestion(2)">
+                    <input type="radio" name="skin-tone" value="warm">
+                    <div class="option-content">
+                        <img src="images/warm.png" alt="Warm">
+                        <span>Warm</span>
+                    </div>
+                </label>
+                <label class="option" onclick="nextQuestion(2)">
+                    <input type="radio" name="skin-tone" value="cold">
+                    <div class="option-content">
+                        <img src="images/cold.png" alt="Cold">
+                        <span>Cold</span>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question" id="question-3" style="display: none;">
+            <h2>Q3: What is your body type?</h2>
+            <div class="options" id="male-options" style="display: none;">
+                <!-- <h3>Male</h3> -->
+                <label class="option" onclick="nextQuestion(3)">
+                    <input type="radio" name="body-type" value="rectangle">
+                    <div class="option-content">
+                        <img src="images/rectangle.png" alt="Rectangle">
+                        <span>Rectangle</span>
+                    </div>
+                </label>
+                <label class="option" onclick="nextQuestion(3)">
+                    <input type="radio" name="body-type" value="inverted-triangle">
+                    <div class="option-content">
+                        <img src="images/inverted_triangle.png" alt="Inverted Triangle">
+                        <span>Inverted Triangle</span>
+                    </div>
+                </label>
+                <label class="option" onclick="nextQuestion(3)">
+                    <input type="radio" name="body-type" value="trapezoid">
+                    <div class="option-content">
+                        <img src="images/trapezoid.png" alt="Trapezoid">
+                        <span>Trapezoid</span>
+                    </div>
+                </label>
+                <label class="option" onclick="nextQuestion(3)">
+                    <input type="radio" name="body-type" value="triangle">
+                    <div class="option-content">
+                        <img src="images/triangle.png" alt="Triangle">
+                        <span>Triangle</span>
+                    </div>
+                </label>
+                <label class="option" onclick="nextQuestion(3)">
+                    <input type="radio" name="body-type" value="oval">
+                    <div class="option-content">
+                        <img src="images/oval.png" alt="Oval">
+                        <span>Oval</span>
+                    </div>
+                </label>
+            </div>
+            <div class="options" id="female-options" style="display: none;">
+                <!-- <h3>Female</h3> -->
+                <label class="option" onclick="nextQuestion(3)">
+                    <input type="radio" name="body-type" value="hourglass">
+                    <div class="option-content">
+                        <img src="images/hourglass.png" alt="Hourglass">
+                        <span>Hourglass</span>
+                    </div>
+                </label>
+                <label class="option" onclick="nextQuestion(3)">
+                    <input type="radio" name="body-type" value="triangle">
+                    <div class="option-content">
+                        <img src="images/triangle.png" alt="Triangle (Pear)">
+                        <span>Triangle (Pear)</span>
+                    </div>
+                </label>
+                <label class="option" onclick="nextQuestion(3)">
+                    <input type="radio" name="body-type" value="inverted-triangle">
+                    <div class="option-content">
+                        <img src="images/inverted_triangle_f.png" alt="Inverted Triangle">
+                        <span>Inverted Triangle</span>
+                    </div>
+                </label>
+                <label class="option" onclick="nextQuestion(3)">
+                    <input type="radio" name="body-type" value="round">
+                    <div class="option-content">
+                        <img src="images/round.png" alt="Round (Apple)">
+                        <span>Round (Apple)</span>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question" id="question-4" style="display: none;">
+            <h2>Q4: What type of style do you want?</h2>
+            <div class="options">
+                <label class="option" onclick="nextQuestion(4)">
+                    <input type="radio" name="style-type" value="ethnic">
+                    <div class="option-content">
+                        <img src="images/ethnic.png" alt="Ethnic">
+                        <span>Ethnic</span>
+                    </div>
+                </label>
+                <label class="option" onclick="nextQuestion(4)">
+                    <input type="radio" name="style-type" value="traditional">
+                    <div class="option-content">
+                        <img src="images/traditional.png" alt="Traditional">
+                        <span>Traditional</span>
+                    </div>
+                </label>
+                <label class="option" onclick="nextQuestion(4)">
+                    <input type="radio" name="style-type" value="formal">
+                    <div class="option-content">
+                        <img src="images/formal.png" alt="Formal">
+                        <span>Formal</span>
+                    </div>
+                </label>
+                <label class="option" onclick="nextQuestion(4)">
+                    <input type="radio" name="style-type" value="semi-formal">
+                    <div class="option-content">
+                        <img src="images/semi-formal.png" alt="Semi-formal">
+                        <span>Semi-formal</span>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question" id="question-5" style="display: none;">
+            <h2>Q5: For what type of occasion do you want to be styled?</h2>
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="occasion" value="formal-event" onclick="nextQuestion(5)">
+                    <div class="option-content">
+                        <img src="images/formal_event.png" alt="Formal Event">
+                        <span>Formal Event (e.g., annual function, office party)</span>
+                    </div>
+                </label>
+                <label class="option">
+                    <input type="radio" name="occasion" value="wedding" onclick="nextQuestion(5)">
+                    <div class="option-content">
+                        <img src="images/wedding.png" alt="Wedding">
+                        <span>Wedding</span>
+                    </div>
+                </label>
+                <label class="option">
+                    <input type="radio" name="occasion" value="casual-party" onclick="nextQuestion(5)">
+                    <div class="option-content">
+                        <img src="images/casual_party.png" alt="Casual Party">
+                        <span>Casual Party or Pub</span>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <div class="navigation-buttons">
+            <button class="button" id="prev-button" onclick="prevQuestion()" style="display: none;">Previous</button>
+            <button type="submit" class="button" id="submit-button" style="display: none;">Submit</button>
+        </div>
+    </div>
+</body>
+
+</html>
